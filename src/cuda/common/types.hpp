@@ -39,7 +39,7 @@
 #endif
 
 #ifndef CPP14_CONSTEXPR
-#if __cplusplus >= 201402L
+#if __cplusplus >= 201402L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201402L)
 #define CPP14_CONSTEXPR constexpr
 #else
 #define CPP14_CONSTEXPR

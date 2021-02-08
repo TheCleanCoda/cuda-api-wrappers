@@ -1015,7 +1015,7 @@ inline void set_scalar_range_attribute(region_t region, cudaMemoryAdvise attribu
 struct region_t : public memory::region_t {
 	using parent = memory::region_t;
 
-#if __cplusplus < 201703L
+#if __cplusplus < 201703L && (!defined(_MSVC_LANG) || _MSVC_LANG < 201703L)
 	region_t() = default;
 	region_t(void* start, size_t size_in_bytes) : parent{start, size_in_bytes} { }
 	region_t(const region_t&) = default;
