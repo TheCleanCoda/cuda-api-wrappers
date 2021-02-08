@@ -987,7 +987,7 @@ namespace managed {
 namespace detail {
 
 template <typename T>
-inline T get_scalar_range_attribute(region_t region, cudaMemRangeAttribute attribute)
+inline T get_scalar_range_attribute(cuda::memory::region_t region, cudaMemRangeAttribute attribute)
 {
 	uint32_t attribute_value { 0 };
 	auto result = cudaMemRangeGetAttribute(

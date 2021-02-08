@@ -132,7 +132,7 @@ inline void synchronize(device_t& device);
 class device_t {
 public: // types
 	using properties_t = device::properties_t;
-	using attribute_t = device::attribute_t;
+	using attribute_t = cudaDeviceAttr;
 	using attribute_value_t = device::attribute_value_t;
 	using resource_limit_t = size_t;
 	using shared_memory_bank_size_t = cudaSharedMemConfig;
